@@ -10,8 +10,11 @@ class canvasDraw {
     }
 
     textDraw() {
-        this.ctx.strokeStyle = 'blue';
-        this.ctx.strokeRect(100, 100, 100, 100);
+        this.ctx.fillRect(0, 0, 100, 100);
+        this.ctx.font = "50pt Open sans";
+        this.ctx.textBaseline = "up";
+        this.ctx.fillStyle = "white";
+        this.ctx.fillText("A", 40, 90);
     }
 }
 
