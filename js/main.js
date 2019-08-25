@@ -4,8 +4,8 @@ class canvasDraw {
     constructor(canvas) {
         this.canvas = canvas;
         this.ctx = this.canvas.getContext("2d");
-        this.canvasWidth = window.innerWidth;
-        this.canvasHeight = window.innerHeight;
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
     }
 
     textDraw() {
