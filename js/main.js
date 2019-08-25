@@ -7,7 +7,9 @@ class canvasDraw {
 
     }
 
+    textDraw() {
 
+    }
 }
 
 const canvas = document.querySelector("canvas");
