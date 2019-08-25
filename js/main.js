@@ -13,13 +13,15 @@ class canvasDraw {
     }
 
     textDraw() {
+        this.xPosRect = 0;
+        this.yPosRect = 0;
         this.xRect = 100;
         this.yRect = 100;
         this.xText = this.xRect - 60;
         this.yText = this.yRect - 10;
 
         this.ctx.beginPath();
-        this.ctx.fillRect(0, 0, this.xRect, this.yRect);
+        this.ctx.fillRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
         this.ctx.font = "50pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "white";
