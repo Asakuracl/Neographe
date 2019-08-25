@@ -7,6 +7,7 @@ class canvasDraw {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
         this.textDraw();
+        this.animate();
 
 
     }
@@ -17,11 +18,24 @@ class canvasDraw {
         this.xText = this.xRect - 60;
         this.yText = this.yRect - 10;
 
+        this.ctx.beginPath();
         this.ctx.fillRect(0, 0, this.xRect, this.yRect);
         this.ctx.font = "50pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "white";
         this.ctx.fillText("A", this.xText, this.yText);
+
+        this.xRect += 1;
+    }
+
+    animate() {
+        //requestAnimationFrame(this.animate.bind(this));
+
+        //this.ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+
+        //this.textDraw;
+
     }
 }
 
