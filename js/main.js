@@ -17,32 +17,13 @@ class canvasDraw {
         this.xSpeed = (Math.random() - 0.5) * 8;
         this.ySpeed = (Math.random() - 0.5) * 8;
 
-        //this.textDraw();
+        this.textDraw();
         this.animate();
-
 
     }
 
-    /*
-        textDraw() {
-    
-            this.ctx.beginPath();
-            this.ctx.strokeRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
-            this.ctx.font = "50pt Open sans";
-            this.ctx.textBaseline = "up";
-            this.ctx.fillStyle = "black";
-            this.ctx.fillText("A", this.xText, this.yText);
-    
-            //this.xPosRect += 1;
-    
-        }
-    */
 
-
-    animate() {
-        requestAnimationFrame(this.animate.bind(this));
-
-        this.ctx.clearRect(0, 0, innerWidth, innerHeight);
+    textDraw() {
 
         this.ctx.beginPath();
         this.ctx.strokeRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
@@ -51,6 +32,9 @@ class canvasDraw {
         this.ctx.fillStyle = "black";
         this.ctx.fillText("A", this.xText, this.yText);
 
+    }
+
+    update() {
         if (this.xPosRect + this.xRect > innerWidth || this.xPosRect < 0) {
             this.xSpeed = -this.xSpeed;
         }
@@ -64,6 +48,17 @@ class canvasDraw {
 
         this.yPosRect += this.ySpeed;
         this.yText += this.ySpeed;
+
+        this.textDraw();
+    }
+
+
+    animate() {
+        requestAnimationFrame(this.animate.bind(this));
+
+        this.ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+        this.update();
 
     }
 
