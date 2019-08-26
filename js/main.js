@@ -8,15 +8,14 @@ class canvasDraw {
         this.canvas.height = window.innerHeight;
 
 
-        this.xPosRectArray = [];
-        this.yPosRectArray = [];
-        this.xRectArray = [];
-        this.yRectArray = [];
-        this.xTextArray = [];
-        this.yTextArray = [];
-
-        this.xSpeedArray = [];
-        this.ySpeedArray = [];
+        this.xPosRect = [];
+        this.yPosRect = [];
+        this.xRect = [];
+        this.yRect = [];
+        this.xText = [];
+        this.yText = [];
+        this.xSpeed = [];
+        this.ySpeed = [];
 
 
         for (let i = 0; i < 2; i++) {
@@ -26,7 +25,6 @@ class canvasDraw {
             this.yRect = 100;
             this.xText = this.xPosRect + 40;
             this.yText = this.yPosRect + 90;
-
             this.xSpeed = (Math.random() - 0.5) * 8;
             this.ySpeed = (Math.random() - 0.5) * 8;
 
@@ -36,7 +34,6 @@ class canvasDraw {
             this.yRectArray.push(this.yRect);
             this.xTextArray.push(this.xText);
             this.yTextArray.push(this.yText);
-
             this.xSpeedArray.push(this.xSpeed);
             this.ySpeedArray.push(this.ySpeed);
 
@@ -50,12 +47,16 @@ class canvasDraw {
 
 
     textDraw() {
-        this.ctx.beginPath();
-        this.ctx.strokeRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
-        this.ctx.font = "50pt Open sans";
-        this.ctx.textBaseline = "up";
-        this.ctx.fillStyle = "black";
-        this.ctx.fillText("A", this.xText, this.yText);
+        for (let i = 0; i < 2; i++) {
+            this.ctx.beginPath();
+            this.ctx.strokeRect(this.xPosRect[i], this.yPosRect[i], this.xRect[i], this.yRect[i]);
+            this.ctx.font = "50pt Open sans";
+            this.ctx.textBaseline = "up";
+            this.ctx.fillStyle = "black";
+            this.ctx.fillText("A", this.xText[i], this.yText[i]);
+
+        }
+
 
     }
 
