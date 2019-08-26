@@ -14,34 +14,40 @@ class canvasDraw {
         this.xText = this.xPosRect + 40;
         this.yText = this.yPosRect + 90;
 
-        this.textDraw();
+        //this.textDraw();
         this.animate();
 
 
     }
 
-    textDraw() {
-
-        this.ctx.beginPath();
-        this.ctx.fillRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
-        this.ctx.font = "50pt Open sans";
-        this.ctx.textBaseline = "up";
-        this.ctx.fillStyle = "white";
-        this.ctx.fillText("A", this.xText, this.yText);
-
-        this.xPosRect++;
-    }
-
+    /*
+        textDraw() {
+    
+            this.ctx.beginPath();
+            this.ctx.strokeRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
+            this.ctx.font = "50pt Open sans";
+            this.ctx.textBaseline = "up";
+            this.ctx.fillStyle = "black";
+            this.ctx.fillText("A", this.xText, this.yText);
+    
+            //this.xPosRect += 1;
+    
+        }
+    */
     animate() {
         requestAnimationFrame(this.animate.bind(this));
 
+        this.ctx.beginPath();
+        this.ctx.strokeRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
+        this.ctx.font = "50pt Open sans";
+        this.ctx.textBaseline = "up";
+        this.ctx.fillStyle = "black";
+        this.ctx.fillText("A", this.xText, this.yText);
+
+        //this.xPosRect += 1;
         //this.ctx.clearRect(0, 0, innerWidth, innerHeight);
 
-        this.textDraw;
-        //this.xPosRect += 1;
-        //console.log(this.xPosRect);
-        //this.xPosRect += 1;
-        //console.log(this.xPosRect);
+
 
     }
 }
