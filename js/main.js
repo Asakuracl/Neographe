@@ -21,7 +21,7 @@ class canvasDraw {
             this.ySpeed = (Math.random() - 0.5) * 8;
 
 
-            this.rectArray.push(this.xPosRect, this.yPosRect)
+            this.rectArray.push(this.xPosRect, this.yPosRect, this.xRect, this.yRect, this.xText, this.yText, this.xSpeed, this.ySpeed);
         };
         console.log(this.rectArray)
         //this.textDraw();
