@@ -18,23 +18,46 @@ class canvasDraw {
         this.ySpeed = ySpeed;
         */
 
+        //this.rectArray = [];
+
+        //for (let i = 0; i < 50; i++) {
+
+        this.xPosRect = Math.random() * innerWidth;
+        this.yPosRect = Math.random() * innerHeight;
+        this.xRect = 100;
+        this.yRect = 100;
+        this.xText = this.xPosRect + 40;
+        this.yText = this.yPosRect + 90;
+
+        this.xSpeed = (Math.random() - 0.5) * 8;
+        this.ySpeed = (Math.random() - 0.5) * 8;
+
+        //};
+
         this.rectArray = [];
 
-        for (let i = 0; i < 50; i++) {
-            this.xPosRect = Math.random() * innerWidth;
-            this.yPosRect = Math.random() * innerHeight;
-            this.xRect = 100;
-            this.yRect = 100;
-            this.xText = this.xPosRect + 40;
-            this.yText = this.yPosRect + 90;
-
-            this.xSpeed = (Math.random() - 0.5) * 8;
-            this.ySpeed = (Math.random() - 0.5) * 8;
+        for (let i = 0; i < 5; i++) {
+            let rect = {
+                xPosRect: Math.random() * innerWidth,
+                yPosRect: Math.random() * innerHeight,
+                xRect: 100,
+                yRect: 100,
+                xText: this.xPosRect + 40,
+                yText: this.xPosRect + 90,
+                xSpeed: (Math.random() - 0.5) * 8,
+                ySpeed: (Math.random() - 0.5) * 8
+            }
+            this.rectArray.push(rect);
         };
 
-        this.rectArray.push(this.animate());
+        //console.log(rect);
+        console.log(this.rectArray);
+
+        //this.rectArray.push(rect);
+        //this.rectArray.push(this.animate());
         //this.textDraw();
-        //this.animate();
+        this.animate();
+
 
     }
 
@@ -48,7 +71,14 @@ class canvasDraw {
         this.ctx.fillStyle = "black";
         this.ctx.fillText("A", this.xText, this.yText);
 
+        /*
+                for (let i = 0; i < this.rectArray.length; i++) {
+                    this.textDraw(i);
+        
+                }
+        */
     }
+
 
     update() {
         if (this.xPosRect + this.xRect > innerWidth || this.xPosRect < 0) {
@@ -66,6 +96,7 @@ class canvasDraw {
         this.yText += this.ySpeed;
 
         this.textDraw();
+
     }
 
 
@@ -75,31 +106,15 @@ class canvasDraw {
         this.ctx.clearRect(0, 0, innerWidth, innerHeight);
         //this.update();
 
+
         for (let i = 0; i < this.rectArray.length; i++) {
-            this.rectArray[i].this.update();
-
+            this.rectArray[i];
+            this.update();
         }
-
-    }
+    };
 
 }
 
 const canvas = document.querySelector("canvas");
-/*
-let rectArray = [];
-for (let i = 0; i < 50; i++) {
-
-    let xPosRect = Math.random() * innerWidth;
-    let yPosRect = Math.random() * innerHeight;
-    let xRect = 100;
-    let yRect = 100;
-    let xText = this.xPosRect + 40;
-    let yText = this.yPosRect + 90;
-    let xSpeed = (Math.random() - 0.5) * 8;
-    let ySpeed = (Math.random() - 0.5) * 8;
-    rectArray.push(new canvasDraw(xPosRect, yPosRect, xRect, yRect, xText, yText, xSpeed, ySpeed));
-}
-*/
 
 const draw = new canvasDraw(canvas);
-
