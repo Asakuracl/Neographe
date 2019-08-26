@@ -34,8 +34,12 @@ class canvasDraw {
     
         }
     */
+
+
     animate() {
-        requestAnimationFrame(this.animate.bind(this));
+        //requestAnimationFrame(this.animate.bind(this));
+
+        this.ctx.clearRect(0, 0, innerWidth, innerHeight);
 
         this.ctx.beginPath();
         this.ctx.strokeRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
@@ -44,12 +48,12 @@ class canvasDraw {
         this.ctx.fillStyle = "black";
         this.ctx.fillText("A", this.xText, this.yText);
 
-        //this.xPosRect += 1;
-        //this.ctx.clearRect(0, 0, innerWidth, innerHeight);
-
-
+        this.xPosRect += 1;
+        this.xText += 1;
+        //this.ctx.clearRect(0, innerWidth, innerHeight);
 
     }
+
 }
 
 const canvas = document.querySelector("canvas");
