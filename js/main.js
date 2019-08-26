@@ -7,8 +7,8 @@ class canvasDraw {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
 
-        this.xPosRect = 0;
-        this.yPosRect = 0;
+        this.xPosRect = Math.random() * innerWidth;
+        this.yPosRect = Math.random() * innerHeight;
         this.xRect = 100;
         this.yRect = 100;
         this.xText = this.xPosRect + 40;
