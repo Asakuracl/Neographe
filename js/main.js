@@ -38,7 +38,7 @@ class canvasDraw {
 
 
     animate() {
-        //requestAnimationFrame(this.animate.bind(this));
+        requestAnimationFrame(this.animate.bind(this));
 
         this.ctx.clearRect(0, 0, innerWidth, innerHeight);
 
@@ -48,6 +48,10 @@ class canvasDraw {
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "black";
         this.ctx.fillText("A", this.xText, this.yText);
+
+        if (this.xPosRect + this.xRect > innerWidth || this.xPosRect < 0) {
+            this.xSpeed = -this.xSpeed;
+        }
 
         this.xPosRect += this.xSpeed;
         this.xText += this.xSpeed;
