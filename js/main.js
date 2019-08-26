@@ -54,9 +54,12 @@ class canvasDraw {
             this.xSpeed = -this.xSpeed;
         }
 
+
         this.xPosRect += this.xSpeed;
         this.xText += this.xSpeed;
 
+        this.yPosRect += this.ySpeed;
+        this.yText += this.ySpeed;
 
     }
 
