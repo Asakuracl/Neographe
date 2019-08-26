@@ -14,8 +14,9 @@ class canvasDraw {
         this.xText = this.xPosRect + 40;
         this.yText = this.yPosRect + 90;
 
-        this.xSpeed = 4;
-        this.ySpeed = 4;
+        this.xSpeed = (Math.random() - 0.5) * 8;
+        this.ySpeed = (Math.random() - 0.5) * 8;
+
         //this.textDraw();
         this.animate();
 
