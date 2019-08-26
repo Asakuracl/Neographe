@@ -9,7 +9,7 @@ class canvasDraw {
 
         this.rectArray = [];
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 2; i++) {
             this.xPosRect = Math.random() * innerWidth;
             this.yPosRect = Math.random() * innerHeight;
             this.xRect = 100;
@@ -19,8 +19,11 @@ class canvasDraw {
 
             this.xSpeed = (Math.random() - 0.5) * 8;
             this.ySpeed = (Math.random() - 0.5) * 8;
-        };
 
+
+            this.rectArray.push(this.xPosRect, this.yPosRect)
+        };
+        console.log(this.rectArray)
         //this.textDraw();
         this.animate();
 
