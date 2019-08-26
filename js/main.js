@@ -7,7 +7,17 @@ class canvasDraw {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
 
-        this.rectArray = [];
+
+        this.xPosRectArray = [];
+        this.yPosRectArray = [];
+        this.xRectArray = [];
+        this.yRectArray = [];
+        this.xTextArray = [];
+        this.yTextArray = [];
+
+        this.xSpeedArray = [];
+        this.ySpeedArray = [];
+
 
         for (let i = 0; i < 2; i++) {
             this.xPosRect = Math.random() * innerWidth;
@@ -20,10 +30,19 @@ class canvasDraw {
             this.xSpeed = (Math.random() - 0.5) * 8;
             this.ySpeed = (Math.random() - 0.5) * 8;
 
+            this.xPosRectArray.push(this.xPosRect);
+            this.yPosRectArray.push(this.yPosRect);
+            this.xRectArray.push(this.xRect);
+            this.yRectArray.push(this.yRect);
+            this.xTextArray.push(this.xText);
+            this.yTextArray.push(this.yText);
 
-            this.rectArray.push(this.xPosRect, this.yPosRect, this.xRect, this.yRect, this.xText, this.yText, this.xSpeed, this.ySpeed);
+            this.xSpeedArray.push(this.xSpeed);
+            this.ySpeedArray.push(this.ySpeed);
+
         };
-        console.log(this.rectArray)
+        console.log(this.xPosRectArray)
+
         //this.textDraw();
         this.animate();
 
@@ -31,17 +50,18 @@ class canvasDraw {
 
 
     textDraw() {
-
         this.ctx.beginPath();
         this.ctx.strokeRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
         this.ctx.font = "50pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "black";
         this.ctx.fillText("A", this.xText, this.yText);
+
     }
 
 
     update() {
+
         if (this.xPosRect + this.xRect > innerWidth || this.xPosRect < 0) {
             this.xSpeed = -this.xSpeed;
         }
@@ -65,6 +85,7 @@ class canvasDraw {
         requestAnimationFrame(this.animate.bind(this));
 
         this.ctx.clearRect(0, 0, innerWidth, innerHeight);
+
         this.update();
 
     };
