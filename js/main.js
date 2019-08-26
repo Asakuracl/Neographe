@@ -6,21 +6,6 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        /*
-        this.xPosRect = xPosRect;
-        this.yPosRect = yPosRect;
-        this.xRect = xRect;
-        this.yRect = yRect;
-        this.xText = xText;
-        this.yText = yText;
-
-        this.xSpeed = xSpeed;
-        this.ySpeed = ySpeed;
-        */
-
-        //this.rectArray = [];
-
-        //for (let i = 0; i < 50; i++) {
 
         this.xPosRect = Math.random() * innerWidth;
         this.yPosRect = Math.random() * innerHeight;
@@ -32,32 +17,8 @@ class canvasDraw {
         this.xSpeed = (Math.random() - 0.5) * 8;
         this.ySpeed = (Math.random() - 0.5) * 8;
 
-        //};
-
-        this.rectArray = [];
-
-        for (let i = 0; i < 5; i++) {
-            let rect = {
-                xPosRect: Math.random() * innerWidth,
-                yPosRect: Math.random() * innerHeight,
-                xRect: 100,
-                yRect: 100,
-                xText: this.xPosRect + 40,
-                yText: this.xPosRect + 90,
-                xSpeed: (Math.random() - 0.5) * 8,
-                ySpeed: (Math.random() - 0.5) * 8
-            }
-            this.rectArray.push(rect);
-        };
-
-        //console.log(rect);
-        console.log(this.rectArray);
-
-        //this.rectArray.push(rect);
-        //this.rectArray.push(this.animate());
         //this.textDraw();
         this.animate();
-
 
     }
 
@@ -70,13 +31,6 @@ class canvasDraw {
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "black";
         this.ctx.fillText("A", this.xText, this.yText);
-
-        /*
-                for (let i = 0; i < this.rectArray.length; i++) {
-                    this.textDraw(i);
-        
-                }
-        */
     }
 
 
@@ -104,12 +58,92 @@ class canvasDraw {
         requestAnimationFrame(this.animate.bind(this));
 
         this.ctx.clearRect(0, 0, innerWidth, innerHeight);
-        //this.update();
+        this.update();
 
+    };
+
+}
+
+const canvas = document.querySelector("canvas");
+
+const draw = new canvasDraw(canvas);
+
+
+//
+/* 1 methode
+class canvasDraw {
+    constructor(canvas) {
+        this.canvas = canvas;
+        this.ctx = this.canvas.getContext("2d");
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+
+        this.letters = {
+            letter: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+        };
+
+        this.letterValues = Object.values(this.letters.letter);
+
+        this.rectArray = [];
+
+        for (let i = 0; i < 30; i++) {
+            let rect = {
+                xPosRect: Math.random() * innerWidth,
+                yPosRect: Math.random() * innerHeight,
+                xRect: 100,
+                yRect: 100,
+                xText: this.xPosRect + 40,
+                yText: this.xPosRect + 90,
+                xSpeed: (Math.random() - 0.5) * 8,
+                ySpeed: (Math.random() - 0.5) * 8
+            };
+            rect.xText = rect.xPosRect + 40;
+            rect.yText = rect.yPosRect + 90;
+            rect.randomLetter = this.letterValues[Math.floor(Math.random() * this.letterValues.length)]
+            this.rectArray.push(rect);
+        };
+
+        console.log(this.rectArray);
+
+        this.animate();
+    }
+
+
+    textDraw(rect) {
+
+        this.ctx.beginPath();
+        this.ctx.strokeRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
+        this.ctx.font = "50pt Open sans";
+        this.ctx.textBaseline = "up";
+        this.ctx.fillStyle = "black";
+        this.ctx.fillText(rect.randomLetter , rect.xText, rect.yText);
+    }
+
+
+    update(rect) {
+        if (rect.xPosRect + rect.xRect > innerWidth || rect.xPosRect < 0) {
+            rect.xSpeed = -rect.xSpeed;
+        }
+
+        if (rect.yPosRect + rect.yRect > innerHeight || rect.yPosRect < 0) {
+            rect.ySpeed = -rect.ySpeed;
+        }
+
+        rect.xPosRect += rect.xSpeed;
+        rect.xText += rect.xSpeed;
+        rect.yPosRect += rect.ySpeed;
+        rect.yText += rect.ySpeed;
+        this.textDraw(rect);
+    }
+
+
+    animate() {
+        requestAnimationFrame(this.animate.bind(this));
+
+        this.ctx.clearRect(0, 0, innerWidth, innerHeight);
 
         for (let i = 0; i < this.rectArray.length; i++) {
-            this.rectArray[i];
-            this.update();
+            this.update(this.rectArray[i]);
         }
     };
 
@@ -118,3 +152,5 @@ class canvasDraw {
 const canvas = document.querySelector("canvas");
 
 const draw = new canvasDraw(canvas);
+
+*/
