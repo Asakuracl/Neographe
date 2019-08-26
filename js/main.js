@@ -14,6 +14,7 @@ class canvasDraw {
         this.xText = this.xPosRect + 40;
         this.yText = this.yPosRect + 90;
 
+        this.xSpeed = 4;
         //this.textDraw();
         this.animate();
 
@@ -48,9 +49,9 @@ class canvasDraw {
         this.ctx.fillStyle = "black";
         this.ctx.fillText("A", this.xText, this.yText);
 
-        this.xPosRect += 1;
-        this.xText += 1;
-        //this.ctx.clearRect(0, innerWidth, innerHeight);
+        this.xPosRect += this.xSpeed;
+        this.xText += this.xSpeed;
+
 
     }
 
