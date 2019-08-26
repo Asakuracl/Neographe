@@ -17,8 +17,8 @@ class canvasDraw {
         this.yPosRect = 0;
         this.xRect = 100;
         this.yRect = 100;
-        this.xText = this.xRect - 60;
-        this.yText = this.yRect - 10;
+        this.xText = this.xPosRect + 40;
+        this.yText = this.yPosRect + 90;
 
         this.ctx.beginPath();
         this.ctx.fillRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
