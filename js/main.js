@@ -28,7 +28,7 @@ class canvasDraw {
             this.xSpeed.push((Math.random() - 0.5) * 8);
             this.ySpeed.push((Math.random() - 0.5) * 8);
         };
-        console.log(this.xPosRect)
+        console.log(this.xText)
 
         //this.textDraw();
         this.animate();
@@ -52,22 +52,24 @@ class canvasDraw {
 
 
     update() {
+        for (let i = 0; i < 2; i++) {
+            if (this.xPosRect[i] + this.xRect[i] > innerWidth || this.xPosRect[i] < 0) {
+                this.xSpeed[i] = -this.xSpeed[i];
+            }
 
-        if (this.xPosRect + this.xRect > innerWidth || this.xPosRect < 0) {
-            this.xSpeed = -this.xSpeed;
+            if (this.yPosRect[i] + this.yRect[i] > innerHeight || this.yPosRect[i] < 0) {
+                this.ySpeed[i] = -this.ySpeed[i];
+            }
+
+            this.xPosRect[i] += this.xSpeed[i];
+            this.xText[i] += this.xSpeed[i];
+
+            this.yPosRect[i] += this.ySpeed[i];
+            this.yText[i] += this.ySpeed[i];
+
+            this.textDraw();
         }
 
-        if (this.yPosRect + this.yRect > innerHeight || this.yPosRect < 0) {
-            this.ySpeed = -this.ySpeed;
-        }
-
-        this.xPosRect += this.xSpeed;
-        this.xText += this.xSpeed;
-
-        this.yPosRect += this.ySpeed;
-        this.yText += this.ySpeed;
-
-        this.textDraw();
 
     }
 
