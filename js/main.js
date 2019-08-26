@@ -54,6 +54,9 @@ class canvasDraw {
             this.xSpeed = -this.xSpeed;
         }
 
+        if (this.yPosRect + this.yRect > innerHeight || this.yPosRect < 0) {
+            this.ySpeed = -this.ySpeed;
+        }
 
         this.xPosRect += this.xSpeed;
         this.xText += this.xSpeed;
