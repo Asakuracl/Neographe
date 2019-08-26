@@ -6,6 +6,14 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
+
+        this.xPosRect = 0;
+        this.yPosRect = 0;
+        this.xRect = 100;
+        this.yRect = 100;
+        this.xText = this.xPosRect + 40;
+        this.yText = this.yPosRect + 90;
+
         this.textDraw();
         this.animate();
 
@@ -13,12 +21,6 @@ class canvasDraw {
     }
 
     textDraw() {
-        this.xPosRect = 0;
-        this.yPosRect = 0;
-        this.xRect = 100;
-        this.yRect = 100;
-        this.xText = this.xPosRect + 40;
-        this.yText = this.yPosRect + 90;
 
         this.ctx.beginPath();
         this.ctx.fillRect(this.xPosRect, this.yPosRect, this.xRect, this.yRect);
@@ -27,16 +29,19 @@ class canvasDraw {
         this.ctx.fillStyle = "white";
         this.ctx.fillText("A", this.xText, this.yText);
 
-        this.xRect += 1;
+        this.xPosRect++;
     }
 
     animate() {
-        //requestAnimationFrame(this.animate.bind(this));
+        requestAnimationFrame(this.animate.bind(this));
 
         //this.ctx.clearRect(0, 0, innerWidth, innerHeight);
 
-
-        //this.textDraw;
+        this.textDraw;
+        //this.xPosRect += 1;
+        //console.log(this.xPosRect);
+        //this.xPosRect += 1;
+        //console.log(this.xPosRect);
 
     }
 }
