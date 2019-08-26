@@ -15,6 +15,7 @@ class canvasDraw {
         this.yText = this.yPosRect + 90;
 
         this.xSpeed = 4;
+        this.ySpeed = 4;
         //this.textDraw();
         this.animate();
 
