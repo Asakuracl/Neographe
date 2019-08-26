@@ -7,15 +7,19 @@ class canvasDraw {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
 
-        this.xPosRect = Math.random() * innerWidth;
-        this.yPosRect = Math.random() * innerHeight;
-        this.xRect = 100;
-        this.yRect = 100;
-        this.xText = this.xPosRect + 40;
-        this.yText = this.yPosRect + 90;
+        this.rectArray = [];
 
-        this.xSpeed = (Math.random() - 0.5) * 8;
-        this.ySpeed = (Math.random() - 0.5) * 8;
+        for (let i = 0; i < 10; i++) {
+            this.xPosRect = Math.random() * innerWidth;
+            this.yPosRect = Math.random() * innerHeight;
+            this.xRect = 100;
+            this.yRect = 100;
+            this.xText = this.xPosRect + 40;
+            this.yText = this.yPosRect + 90;
+
+            this.xSpeed = (Math.random() - 0.5) * 8;
+            this.ySpeed = (Math.random() - 0.5) * 8;
+        };
 
         //this.textDraw();
         this.animate();
