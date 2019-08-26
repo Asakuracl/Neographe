@@ -6,19 +6,35 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
+        /*
+        this.xPosRect = xPosRect;
+        this.yPosRect = yPosRect;
+        this.xRect = xRect;
+        this.yRect = yRect;
+        this.xText = xText;
+        this.yText = yText;
 
-        this.xPosRect = Math.random() * innerWidth;
-        this.yPosRect = Math.random() * innerHeight;
-        this.xRect = 100;
-        this.yRect = 100;
-        this.xText = this.xPosRect + 40;
-        this.yText = this.yPosRect + 90;
+        this.xSpeed = xSpeed;
+        this.ySpeed = ySpeed;
+        */
 
-        this.xSpeed = (Math.random() - 0.5) * 8;
-        this.ySpeed = (Math.random() - 0.5) * 8;
+        this.rectArray = [];
 
-        this.textDraw();
-        this.animate();
+        for (let i = 0; i < 50; i++) {
+            this.xPosRect = Math.random() * innerWidth;
+            this.yPosRect = Math.random() * innerHeight;
+            this.xRect = 100;
+            this.yRect = 100;
+            this.xText = this.xPosRect + 40;
+            this.yText = this.yPosRect + 90;
+
+            this.xSpeed = (Math.random() - 0.5) * 8;
+            this.ySpeed = (Math.random() - 0.5) * 8;
+        };
+
+        this.rectArray.push(this.animate());
+        //this.textDraw();
+        //this.animate();
 
     }
 
@@ -57,13 +73,33 @@ class canvasDraw {
         requestAnimationFrame(this.animate.bind(this));
 
         this.ctx.clearRect(0, 0, innerWidth, innerHeight);
+        //this.update();
 
-        this.update();
+        for (let i = 0; i < this.rectArray.length; i++) {
+            this.rectArray[i].this.update();
+
+        }
 
     }
 
 }
 
 const canvas = document.querySelector("canvas");
+/*
+let rectArray = [];
+for (let i = 0; i < 50; i++) {
+
+    let xPosRect = Math.random() * innerWidth;
+    let yPosRect = Math.random() * innerHeight;
+    let xRect = 100;
+    let yRect = 100;
+    let xText = this.xPosRect + 40;
+    let yText = this.yPosRect + 90;
+    let xSpeed = (Math.random() - 0.5) * 8;
+    let ySpeed = (Math.random() - 0.5) * 8;
+    rectArray.push(new canvasDraw(xPosRect, yPosRect, xRect, yRect, xText, yText, xSpeed, ySpeed));
+}
+*/
 
 const draw = new canvasDraw(canvas);
+
