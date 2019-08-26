@@ -17,8 +17,9 @@ class canvasDraw {
         this.xSpeed = [];
         this.ySpeed = [];
 
+        this.squareNumber = 10;
 
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < this.squareNumber; i++) {
             this.xPosRect.push(Math.random() * innerWidth);
             this.yPosRect.push(Math.random() * innerHeight);
             this.xRect.push(100);
@@ -37,7 +38,7 @@ class canvasDraw {
 
 
     textDraw() {
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < this.squareNumber; i++) {
             this.ctx.beginPath();
             this.ctx.strokeRect(this.xPosRect[i], this.yPosRect[i], this.xRect[i], this.yRect[i]);
             this.ctx.font = "50pt Open sans";
@@ -52,7 +53,7 @@ class canvasDraw {
 
 
     update() {
-        for (let i = 0; i < 2; i++) {
+        for (let i = 0; i < this.squareNumber; i++) {
             if (this.xPosRect[i] + this.xRect[i] > innerWidth || this.xPosRect[i] < 0) {
                 this.xSpeed[i] = -this.xSpeed[i];
             }
