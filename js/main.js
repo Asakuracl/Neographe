@@ -36,7 +36,33 @@ class canvasDraw {
         this.colorValues = Object.values(this.colors.color);
 
         this.rectArray = [];
+        /*
+                for (let i = 0; i < this.squareNumber; i++) {
+                    let rect = {
+                        xPosRect: Math.random() * (innerWidth - 100),
+                        yPosRect: Math.random() * (innerHeight - 100),
+                        xSpeed: (Math.random() - 0.5),
+                        ySpeed: (Math.random() - 0.5)
+                    };
+                    rect.xRect = Math.random() * 9 + 1;
+                    rect.yRect = rect.xRect;
+                    rect.minSize = rect.xRect;
+                    rect.xText = rect.xPosRect - 50;
+                    rect.yText = rect.yPosRect + 0;
+                    rect.randomLetter = this.letterValues[Math.floor(Math.random() * this.letterValues.length)];
+                    rect.randomColor = this.colorValues[Math.floor(Math.random() * this.colorValues.length)];
+                    this.rectArray.push(rect);
+                };
+        */
+        this.animate();
+    }
 
+    mouseEvent(e) {
+        this.mouse.x = e.x;
+        this.mouse.y = e.y;
+    }
+
+    init() {
         for (let i = 0; i < this.squareNumber; i++) {
             let rect = {
                 xPosRect: Math.random() * (innerWidth - 100),
@@ -53,17 +79,6 @@ class canvasDraw {
             rect.randomColor = this.colorValues[Math.floor(Math.random() * this.colorValues.length)];
             this.rectArray.push(rect);
         };
-
-        this.animate();
-    }
-
-    mouseEvent(e) {
-        this.mouse.x = e.x;
-        this.mouse.y = e.y;
-    }
-
-    init() {
-
     }
 
     resizeCanvas() {
