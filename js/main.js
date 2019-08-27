@@ -8,7 +8,7 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        this.squareNumber = 1000;
+        this.squareNumber = 10;
 
         this.mouse = {
             x: undefined,
@@ -71,7 +71,7 @@ class canvasDraw {
         this.ctx.beginPath();
         this.ctx.fillStyle = rect.randomColor;
         this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
-        this.ctx.font = "18pt Open sans";
+        this.ctx.font = "15pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "#616971";
         this.ctx.fillText("NEO", rect.xText, rect.yText);
