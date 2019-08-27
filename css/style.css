@@ -1,6 +1,9 @@
 @font-face {
   font-family: "Calligraffiti";
-  src: url("");
+  src: url("css/font/Calligraffiti-webfont.eot") format("eot");
+  src: url("css/font/Calligraffiti-webfont") format("svg");
+  src: url("css/font/Calligraffiti-webfont") format("truetype");
+  src: url("css/font/Calligraffiti-webfont.woff") format("woff");
 }
 
 body {
