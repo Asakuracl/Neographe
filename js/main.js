@@ -29,7 +29,7 @@ class canvasDraw {
             this.xRect.push(100);
             this.yRect.push(100);
             this.xPosRect.push(Math.random() * (innerWidth - this.xRect[i]));
-            this.yPosRect.push(Math.random() * innerHeight - this.yRect[i]));
+            this.yPosRect.push(Math.random() * (innerHeight - this.yRect[i]));
             this.xText.push(parseFloat(this.xPosRect[i]) + 40);
             this.yText.push(parseFloat(this.yPosRect[i]) + 90);
             this.xSpeed.push((Math.random() - 0.5) * 8);
@@ -47,10 +47,11 @@ class canvasDraw {
     textDraw() {
         for (let i = 0; i < this.squareNumber; i++) {
             this.ctx.beginPath();
-            this.ctx.strokeRect(this.xPosRect[i], this.yPosRect[i], this.xRect[i], this.yRect[i]);
+            this.ctx.fillStyle = "black";
+            this.ctx.fillRect(this.xPosRect[i], this.yPosRect[i], this.xRect[i], this.yRect[i]);
             this.ctx.font = "50pt Open sans";
             this.ctx.textBaseline = "up";
-            this.ctx.fillStyle = "black";
+            this.ctx.fillStyle = "white";
             this.ctx.fillText(this.randomLetter[i], this.xText[i], this.yText[i]);
         };
     }
