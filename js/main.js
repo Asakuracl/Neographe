@@ -22,14 +22,6 @@ class canvasDraw {
 
         window.addEventListener('resize', this.resizeCanvas.bind(this));
 
-        /*
-                this.letters = {
-                    letter: ["NEOGRAPHE"]
-                };
-        
-                this.letterValues = Object.values(this.letters.letter);
-        */
-
         this.colors = {
             color: ["#000032", "#F5E18B", "#FF9517", "#172940", "#343434"]
         };
@@ -64,7 +56,6 @@ class canvasDraw {
             rect.yText = rect.yPosRect - 20;
             rect.xTextEnd = rect.xPosRect - 40;
             rect.yTextEnd = rect.yPosRect - 0;
-            //rect.randomLetter = this.letterValues;
             rect.randomColor = this.colorValues[Math.floor(Math.random() * this.colorValues.length)];
             this.rectArray.push(rect);
         };
@@ -76,9 +67,7 @@ class canvasDraw {
         this.init();
     };
 
-
     textDraw(rect) {
-
         this.ctx.beginPath();
         this.ctx.fillStyle = rect.randomColor;
         this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
@@ -134,14 +123,12 @@ class canvasDraw {
 
     animate() {
         requestAnimationFrame(this.animate.bind(this));
-
         this.ctx.clearRect(0, 0, innerWidth, innerHeight);
 
         for (let i = 0; i < this.rectArray.length; i++) {
             this.update(this.rectArray[i]);
         }
     };
-
 }
 
 const canvas = document.querySelector("canvas");
