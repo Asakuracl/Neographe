@@ -30,7 +30,7 @@ class canvasDraw {
         this.letterValues = Object.values(this.letters.letter);
 
         this.colors = {
-            color: ["black", "brown", "beige", "wheat", "skyblue", "red"]
+            color: ["#000032", "#FAF9C6", "#FF9517", "#172940", "#343434"]
         };
 
         this.colorValues = Object.values(this.colors.color);
