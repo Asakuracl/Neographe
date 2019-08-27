@@ -8,6 +8,7 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
+
         this.mouse = {
             x: undefined,
             y: undefined
@@ -44,8 +45,6 @@ class canvasDraw {
             this.rectArray.push(rect);
         };
 
-        console.log(this.rectArray);
-
         this.animate();
     }
 
@@ -64,7 +63,6 @@ class canvasDraw {
         this.ctx.fillStyle = "white";
         this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
     }
-
 
     update(rect) {
         if (rect.xPosRect + rect.xRect > innerWidth || rect.xPosRect < 0) {
