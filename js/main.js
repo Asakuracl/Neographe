@@ -17,19 +17,19 @@ class canvasDraw {
         this.xSpeed = [];
         this.ySpeed = [];
 
-        this.squareNumber = 10;
+        this.squareNumber = 30;
 
         for (let i = 0; i < this.squareNumber; i++) {
             this.xPosRect.push(Math.random() * innerWidth);
             this.yPosRect.push(Math.random() * innerHeight);
             this.xRect.push(100);
             this.yRect.push(100);
-            this.xText.push(this.xPosRect + 40);
-            this.yText.push(this.yPosRect + 90);
+            this.xText.push(parseFloat(this.xPosRect[i]) + 40);
+            this.yText.push(parseFloat(this.yPosRect[i]) + 90);
             this.xSpeed.push((Math.random() - 0.5) * 8);
             this.ySpeed.push((Math.random() - 0.5) * 8);
+
         };
-        console.log(this.xText)
 
         //this.textDraw();
         this.animate();
@@ -45,10 +45,7 @@ class canvasDraw {
             this.ctx.textBaseline = "up";
             this.ctx.fillStyle = "black";
             this.ctx.fillText("A", this.xText[i], this.yText[i]);
-
-        }
-
-
+        };
     }
 
 
@@ -68,12 +65,9 @@ class canvasDraw {
             this.yPosRect[i] += this.ySpeed[i];
             this.yText[i] += this.ySpeed[i];
 
-            this.textDraw();
         }
-
-
+        this.textDraw();
     }
-
 
     animate() {
         requestAnimationFrame(this.animate.bind(this));
@@ -91,8 +85,8 @@ const canvas = document.querySelector("canvas");
 const draw = new canvasDraw(canvas);
 
 
-//
-/* 1 methode
+// 1 methode
+/*
 class canvasDraw {
     constructor(canvas) {
         this.canvas = canvas;
@@ -108,14 +102,14 @@ class canvasDraw {
 
         this.rectArray = [];
 
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 2; i++) {
             let rect = {
                 xPosRect: Math.random() * innerWidth,
                 yPosRect: Math.random() * innerHeight,
                 xRect: 100,
                 yRect: 100,
                 xText: this.xPosRect + 40,
-                yText: this.xPosRect + 90,
+                yText: this.yPosRect + 90,
                 xSpeed: (Math.random() - 0.5) * 8,
                 ySpeed: (Math.random() - 0.5) * 8
             };
@@ -138,7 +132,7 @@ class canvasDraw {
         this.ctx.font = "50pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "black";
-        this.ctx.fillText(rect.randomLetter , rect.xText, rect.yText);
+        this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
     }
 
 
