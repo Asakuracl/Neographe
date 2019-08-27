@@ -19,10 +19,10 @@ class canvasDraw {
 
         for (let i = 0; i < 100; i++) {
             let rect = {
-                xPosRect: Math.random() * innerWidth,
-                yPosRect: Math.random() * innerHeight,
                 xRect: 100,
                 yRect: 100,
+                xPosRect: Math.random() * innerWidth,
+                yPosRect: Math.random() * innerHeight,
                 xText: this.xPosRect + 40,
                 yText: this.yPosRect + 90,
                 xSpeed: (Math.random() - 0.5) * 8,
@@ -33,8 +33,6 @@ class canvasDraw {
             rect.randomLetter = this.letterValues[Math.floor(Math.random() * this.letterValues.length)]
             this.rectArray.push(rect);
         };
-
-        console.log(this.rectArray);
 
         this.animate();
     }
