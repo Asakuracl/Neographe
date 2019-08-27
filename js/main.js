@@ -8,7 +8,7 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        this.squareNumber = 10;
+        this.squareNumber = 1000;
 
         this.mouse = {
             x: undefined,
