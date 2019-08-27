@@ -62,6 +62,10 @@ class canvasDraw {
         this.mouse.y = e.y;
     }
 
+    init() {
+
+    }
+
     resizeCanvas() {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
