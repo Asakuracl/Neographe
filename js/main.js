@@ -25,12 +25,13 @@ class canvasDraw {
             letter: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
         };
 
-        this.colorArray = {
+        this.letterValues = Object.values(this.letters.letter);
+
+        this.colors = {
             color: ["black", "brown", "beige", "white", "blue", "red"]
         };
 
-
-        this.letterValues = Object.values(this.letters.letter);
+        this.colorValues = Object.values(this.colors.color);
 
         this.rectArray = [];
 
