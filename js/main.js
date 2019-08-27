@@ -28,7 +28,7 @@ class canvasDraw {
         this.letterValues = Object.values(this.letters.letter);
 
         this.colors = {
-            color: ["black", "brown", "beige", "white", "blue", "red"]
+            color: ["black", "brown", "beige", "wheat", "skyblue", "red"]
         };
 
         this.colorValues = Object.values(this.colors.color);
@@ -64,7 +64,7 @@ class canvasDraw {
     textDraw(rect) {
 
         this.ctx.beginPath();
-        this.ctx.fillStyle = "black";
+        this.ctx.fillStyle = rect.randomColor;
         this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
         this.ctx.font = "50pt Open sans";
         this.ctx.textBaseline = "up";
