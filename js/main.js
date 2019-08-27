@@ -107,8 +107,8 @@ class canvasDraw {
 
 
         //interactivity
-        if (((this.mouse.x - rect.xPosRect < 100 && this.mouse.x - (rect.xText && rect.xTextEnd) < 100) && (this.mouse.x - rect.xPosRect > -100 && this.mouse.x - (rect.xText && rect.xTextEnd) > -100)) &&
-            ((this.mouse.y - rect.yPosRect < 100 && this.mouse.y - (rect.yText && rect.yTextEnd)) < 100) && (this.mouse.y - rect.yPosRect > -100 && this.mouse.y - (rect.yText && rect.yTextEnd) > -100)
+        if (((this.mouse.x - rect.xPosRect < 100 && this.mouse.x - rect.xText < 100) && (this.mouse.x - rect.xPosRect > -100 && this.mouse.x - rect.xText > -100)) &&
+            ((this.mouse.y - rect.yPosRect < 100 && this.mouse.y - rect.yText < 100) && (this.mouse.y - rect.yPosRect > -100 && this.mouse.y - rect.yText > -100))
 
         ) {
             if (rect.xRect && rect.yRect < this.maxSize) {
@@ -125,7 +125,7 @@ class canvasDraw {
             rect.xTextEnd -= 1;
             rect.yRect -= 1;
             rect.yText -= 1;
-            rect.xTextEnd -= 1;
+            rect.yTextEnd -= 1;
         }
 
         this.textDraw(rect);
