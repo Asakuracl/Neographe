@@ -61,8 +61,8 @@ class canvasDraw {
             rect.yRect = rect.xRect;
             rect.minSize = rect.xRect;
             rect.xText = rect.xPosRect - 50;
-            rect.yText = rect.yPosRect + 0;
-            rect.xTextEnd = rect.xPosRect - 50;
+            rect.yText = rect.yPosRect - 20;
+            rect.xTextEnd = rect.xPosRect - 40;
             rect.yTextEnd = rect.yPosRect - 0;
             //rect.randomLetter = this.letterValues;
             rect.randomColor = this.colorValues[Math.floor(Math.random() * this.colorValues.length)];
