@@ -11,6 +11,10 @@ class canvasDraw {
             letter: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
         };
 
+        this.letterValues = Object.values(this.letters.letter);
+
+        console.log(this.letters.letter)
+
         this.xPosRect = [];
         this.yPosRect = [];
         this.xRect = [];
