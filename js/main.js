@@ -15,7 +15,7 @@ class canvasDraw {
             y: undefined
         }
 
-        this.minSize = 2;
+        //this.minSize = 2;
         this.maxSize = 100;
 
         window.addEventListener('mousemove', this.mouseEvent.bind(this));
@@ -39,13 +39,12 @@ class canvasDraw {
             let rect = {
                 xPosRect: Math.random() * (innerWidth - 100),
                 yPosRect: Math.random() * (innerHeight - 100),
-                xText: this.xPosRect + 40,
-                yText: this.yPosRect + 90,
                 xSpeed: (Math.random() - 0.5),
                 ySpeed: (Math.random() - 0.5)
             };
             rect.xRect = Math.random() * 3 + 1;
             rect.yRect = rect.xRect;
+            rect.minSize = rect.xRect;
             rect.xText = rect.xPosRect + 40;
             rect.yText = rect.yPosRect + 90;
             rect.randomLetter = this.letterValues[Math.floor(Math.random() * this.letterValues.length)];
@@ -97,7 +96,7 @@ class canvasDraw {
                 rect.yRect += 1;
                 rect.yText += 1;
             }
-        } else if (rect.xRect && rect.yRect > this.minSize) {
+        } else if (rect.xRect && rect.yRect > rect.minSize) {
             rect.xRect -= 1;
             rect.xText -= 1;
             rect.yRect -= 1;
