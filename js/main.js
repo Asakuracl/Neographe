@@ -24,7 +24,7 @@ class canvasDraw {
 
 
         this.letters = {
-            letter: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+            letter: ["N", "E", "O", "G", "R", "A", "P", "H", "E"]
         };
 
         this.letterValues = Object.values(this.letters.letter);
