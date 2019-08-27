@@ -13,6 +13,7 @@ class canvasDraw {
             y: undefined
         }
 
+        window.addEventListener('mousemove', this.mouseEvent.bind(this));
 
 
         this.letters = {
