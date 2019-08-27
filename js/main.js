@@ -52,9 +52,9 @@ class canvasDraw {
             rect.xRect = Math.random() * 19 + 1;
             rect.yRect = rect.xRect;
             rect.minSize = rect.xRect;
-            rect.xText = rect.xPosRect - 90;
+            rect.xText = rect.xPosRect - 82;
             rect.yText = rect.yPosRect - 20;
-            rect.xTextEnd = rect.xPosRect - 80;
+            rect.xTextEnd = rect.xPosRect - 76;
             rect.yTextEnd = rect.yPosRect - 0;
             rect.randomColor = this.colorValues[Math.floor(Math.random() * this.colorValues.length)];
             this.rectArray.push(rect);
