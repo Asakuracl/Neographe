@@ -8,7 +8,7 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        this.squareNumber = 500;
+        this.squareNumber = 100;
 
         this.mouse = {
             x: undefined,
@@ -61,7 +61,7 @@ class canvasDraw {
             rect.minSize = rect.xRect;
             rect.xText = rect.xPosRect - 50;
             rect.yText = rect.yPosRect + 0;
-            rect.randomLetter = this.letterValues[Math.floor(Math.random() * this.letterValues.length)];
+            rect.randomLetter = this.letterValues;
             rect.randomColor = this.colorValues[Math.floor(Math.random() * this.colorValues.length)];
             this.rectArray.push(rect);
         };
