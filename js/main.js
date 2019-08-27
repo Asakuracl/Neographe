@@ -8,7 +8,7 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        this.squareNumber = 100;
+        this.squareNumber = 800;
 
         this.mouse = {
             x: undefined,
@@ -57,7 +57,7 @@ class canvasDraw {
                 xSpeed: (Math.random() - 0.5),
                 ySpeed: (Math.random() - 0.5)
             };
-            rect.xRect = Math.random() * 9 + 1;
+            rect.xRect = Math.random() * 19 + 1;
             rect.yRect = rect.xRect;
             rect.minSize = rect.xRect;
             rect.xText = rect.xPosRect - 50;
@@ -80,7 +80,7 @@ class canvasDraw {
         this.ctx.beginPath();
         this.ctx.fillStyle = rect.randomColor;
         this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
-        this.ctx.font = "15pt Open sans";
+        this.ctx.font = "20pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "#616971";
         this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
