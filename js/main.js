@@ -32,8 +32,8 @@ class canvasDraw {
                 yRect: 100,
                 xText: this.xPosRect + 40,
                 yText: this.yPosRect + 90,
-                xSpeed: (Math.random() - 0.5) * 8,
-                ySpeed: (Math.random() - 0.5) * 8
+                xSpeed: (Math.random() - 0.5),
+                ySpeed: (Math.random() - 0.5)
             };
             rect.xText = rect.xPosRect + 40;
             rect.yText = rect.yPosRect + 90;
