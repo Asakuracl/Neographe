@@ -26,10 +26,10 @@ class canvasDraw {
         this.squareNumber = 30;
 
         for (let i = 0; i < this.squareNumber; i++) {
-            this.xPosRect.push(Math.random() * innerWidth);
-            this.yPosRect.push(Math.random() * innerHeight);
             this.xRect.push(100);
             this.yRect.push(100);
+            this.xPosRect.push(Math.random() * innerWidth);
+            this.yPosRect.push(Math.random() * innerHeight);
             this.xText.push(parseFloat(this.xPosRect[i]) + 40);
             this.yText.push(parseFloat(this.yPosRect[i]) + 90);
             this.xSpeed.push((Math.random() - 0.5) * 8);
