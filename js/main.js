@@ -8,7 +8,7 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        this.squareNumber = 800;
+        this.squareNumber = 10;
 
         this.mouse = {
             x: undefined,
@@ -22,13 +22,13 @@ class canvasDraw {
 
         window.addEventListener('resize', this.resizeCanvas.bind(this));
 
-
-        this.letters = {
-            letter: ["NEOGRAPHE"]
-        };
-
-        this.letterValues = Object.values(this.letters.letter);
-
+        /*
+                this.letters = {
+                    letter: ["NEOGRAPHE"]
+                };
+        
+                this.letterValues = Object.values(this.letters.letter);
+        */
 
         this.colors = {
             color: ["#000032", "#F5E18B", "#FF9517", "#172940", "#343434"]
@@ -62,7 +62,9 @@ class canvasDraw {
             rect.minSize = rect.xRect;
             rect.xText = rect.xPosRect - 50;
             rect.yText = rect.yPosRect + 0;
-            rect.randomLetter = this.letterValues;
+            rect.xTextEnd = rect.xPosRect - 50;
+            rect.yTextEnd = rect.yPosRect + 0;
+            //rect.randomLetter = this.letterValues;
             rect.randomColor = this.colorValues[Math.floor(Math.random() * this.colorValues.length)];
             this.rectArray.push(rect);
         };
@@ -83,7 +85,8 @@ class canvasDraw {
         this.ctx.font = "20pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "#616971";
-        this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
+        this.ctx.fillText("NEO", rect.xText, rect.yText);
+        this.ctx.fillText("GRAPHE", rect.xTextEnd, rect.yTextEnd);
     }
 
     update(rect) {
