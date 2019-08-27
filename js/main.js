@@ -49,7 +49,7 @@ class canvasDraw {
                 xSpeed: (Math.random() - 0.5 * 1),
                 ySpeed: (Math.random() - 0.5 * 1)
             };
-            rect.xRect = Math.random() * 19 + 1;
+            rect.xRect = Math.random() * 29 + 1;
             rect.yRect = rect.xRect;
             rect.minSize = rect.xRect;
             rect.xText = rect.xPosRect - 82;
