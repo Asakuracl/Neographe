@@ -102,6 +102,8 @@ class canvasDraw {
         rect.xText += rect.xSpeed;
         rect.yPosRect += rect.ySpeed;
         rect.yText += rect.ySpeed;
+        rect.xTextEnd += rect.xSpeed;
+        rect.yTextEnd += rect.ySpeed;
 
 
         //interactivity
