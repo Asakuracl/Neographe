@@ -48,7 +48,8 @@ class canvasDraw {
             };
             rect.xText = rect.xPosRect + 40;
             rect.yText = rect.yPosRect + 90;
-            rect.randomLetter = this.letterValues[Math.floor(Math.random() * this.letterValues.length)]
+            rect.randomLetter = this.letterValues[Math.floor(Math.random() * this.letterValues.length)];
+            rect.randomColor = this.colorValues[Math.floor(Math.random() * this.colorValues.length)];
             this.rectArray.push(rect);
         };
 
