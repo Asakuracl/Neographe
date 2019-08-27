@@ -54,6 +54,7 @@ class canvasDraw {
                     this.rectArray.push(rect);
                 };
         */
+        this.init();
         this.animate();
     }
 
