@@ -49,8 +49,6 @@ class canvasDraw {
     mouseEvent(e) {
         this.mouse.x = e.x;
         this.mouse.y = e.y;
-        console.log(this.mouse)
-
     }
 
     textDraw(rect) {
@@ -78,6 +76,11 @@ class canvasDraw {
         rect.xText += rect.xSpeed;
         rect.yPosRect += rect.ySpeed;
         rect.yText += rect.ySpeed;
+
+        if ((this.mouse.x - rect.xPosRect && this.mouse.x - rect.xText) < 50) {
+            rect.xRect += 1;
+        }
+
         this.textDraw(rect);
     }
 
