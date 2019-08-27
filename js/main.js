@@ -46,6 +46,9 @@ class canvasDraw {
         this.animate();
     }
 
+    mouseEvent() {
+
+    }
 
     textDraw(rect) {
 
