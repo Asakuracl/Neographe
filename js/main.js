@@ -36,6 +36,7 @@ class canvasDraw {
             this.xSpeed.push((Math.random() - 0.5) * 8);
             this.ySpeed.push((Math.random() - 0.5) * 8);
 
+            this.randomLetter = this.letterValues[Math.floor(Math.random() * this.letterValues.length)];
         };
 
         //this.textDraw();
