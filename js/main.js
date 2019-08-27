@@ -13,7 +13,7 @@ class canvasDraw {
 
         this.letterValues = Object.values(this.letters.letter);
 
-        console.log(this.letters.letter)
+        console.log(this.letterValues)
 
         this.xPosRect = [];
         this.yPosRect = [];
@@ -23,6 +23,7 @@ class canvasDraw {
         this.yText = [];
         this.xSpeed = [];
         this.ySpeed = [];
+        this.randomLetter = [];
 
         this.squareNumber = 30;
 
@@ -52,7 +53,7 @@ class canvasDraw {
             this.ctx.font = "50pt Open sans";
             this.ctx.textBaseline = "up";
             this.ctx.fillStyle = "black";
-            this.ctx.fillText("A", this.xText[i], this.yText[i]);
+            this.ctx.fillText(this.randomLetter, this.xText[i], this.yText[i]);
         };
     }
 
