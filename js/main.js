@@ -24,10 +24,11 @@ class canvasDraw {
 
 
         this.letters = {
-            letter: ["N", "E", "O", "G", "R", "A", "P", "H", "E"]
+            letter: ["NEOGRAPHE"]
         };
 
         this.letterValues = Object.values(this.letters.letter);
+
 
         this.colors = {
             color: ["#000032", "#F5E18B", "#FF9517", "#172940", "#343434"]
@@ -79,7 +80,7 @@ class canvasDraw {
         this.ctx.beginPath();
         this.ctx.fillStyle = rect.randomColor;
         this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
-        this.ctx.font = "10pt Open sans";
+        this.ctx.font = "15pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "#616971";
         this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
