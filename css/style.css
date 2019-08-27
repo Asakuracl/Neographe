@@ -1,9 +1,9 @@
 @font-face {
   font-family: "Calligraffiti";
-  src: url("css/font/Calligraffiti-webfont.eot") format("eot");
-  src: url("css/font/Calligraffiti-webfont") format("svg");
-  src: url("css/font/Calligraffiti-webfont") format("truetype");
-  src: url("css/font/Calligraffiti-webfont.woff") format("woff");
+  src: url("font/Calligraffiti-webfont.eot") format("eot");
+  src: url("font/Calligraffiti-webfont") format("svg");
+  src: url("font/Calligraffiti-webfont") format("truetype");
+  src: url("font/Calligraffiti-webfont.woff") format("woff");
 }
 
 body {
@@ -12,4 +12,6 @@ body {
 
 h1 {
   font-family: "Calligraffiti";
+  text-align: center;
+  margin-bottom: 0px;
 }
