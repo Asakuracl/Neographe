@@ -8,6 +8,7 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
+        this.squareNumber = 100;
 
         this.mouse = {
             x: undefined,
@@ -28,7 +29,7 @@ class canvasDraw {
 
         this.rectArray = [];
 
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i < this.squareNumber; i++) {
             let rect = {
                 xPosRect: Math.random() * (innerWidth - 100),
                 yPosRect: Math.random() * (innerHeight - 100),
