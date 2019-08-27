@@ -8,7 +8,7 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        this.squareNumber = 100;
+        this.squareNumber = 200;
 
         this.mouse = {
             x: undefined,
@@ -39,13 +39,13 @@ class canvasDraw {
             let rect = {
                 xPosRect: Math.random() * (innerWidth - 100),
                 yPosRect: Math.random() * (innerHeight - 100),
-                xRect: 100,
-                yRect: 100,
                 xText: this.xPosRect + 40,
                 yText: this.yPosRect + 90,
                 xSpeed: (Math.random() - 0.5),
                 ySpeed: (Math.random() - 0.5)
             };
+            rect.xRect = Math.random() * 3 + 1;
+            rect.yRect = rect.xRect;
             rect.xText = rect.xPosRect + 40;
             rect.yText = rect.yPosRect + 90;
             rect.randomLetter = this.letterValues[Math.floor(Math.random() * this.letterValues.length)];
