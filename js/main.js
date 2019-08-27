@@ -43,10 +43,11 @@ class canvasDraw {
     textDraw(rect) {
 
         this.ctx.beginPath();
+        this.ctx.fillStyle = "black";
         this.ctx.strokeRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
         this.ctx.font = "50pt Open sans";
         this.ctx.textBaseline = "up";
-        this.ctx.fillStyle = "black";
+        this.ctx.fillStyle = "white";
         this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
     }
 
