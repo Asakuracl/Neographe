@@ -8,7 +8,7 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        this.squareNumber = 10;
+        this.squareNumber = 1000;
 
         this.mouse = {
             x: undefined,
@@ -52,9 +52,9 @@ class canvasDraw {
             rect.xRect = Math.random() * 19 + 1;
             rect.yRect = rect.xRect;
             rect.minSize = rect.xRect;
-            rect.xText = rect.xPosRect - 50;
+            rect.xText = rect.xPosRect - 90;
             rect.yText = rect.yPosRect - 20;
-            rect.xTextEnd = rect.xPosRect - 40;
+            rect.xTextEnd = rect.xPosRect - 80;
             rect.yTextEnd = rect.yPosRect - 0;
             rect.randomColor = this.colorValues[Math.floor(Math.random() * this.colorValues.length)];
             this.rectArray.push(rect);
@@ -71,7 +71,7 @@ class canvasDraw {
         this.ctx.beginPath();
         this.ctx.fillStyle = rect.randomColor;
         this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
-        this.ctx.font = "20pt Open sans";
+        this.ctx.font = "18pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "#616971";
         this.ctx.fillText("NEO", rect.xText, rect.yText);
