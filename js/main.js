@@ -63,6 +63,8 @@ class canvasDraw {
     }
 
     init() {
+        this.rectArray = [];
+
         for (let i = 0; i < this.squareNumber; i++) {
             let rect = {
                 xPosRect: Math.random() * (innerWidth - 100),
