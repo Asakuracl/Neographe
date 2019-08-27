@@ -79,7 +79,7 @@ class canvasDraw {
         this.ctx.beginPath();
         this.ctx.fillStyle = rect.randomColor;
         this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
-        this.ctx.font = "50pt Open sans";
+        this.ctx.font = "10pt Open sans";
         this.ctx.textBaseline = "up";
         this.ctx.fillStyle = "#616971";
         this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
