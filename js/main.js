@@ -13,6 +13,9 @@ class canvasDraw {
             y: undefined
         }
 
+        this.minSize = 2;
+        this.maxSize = 100;
+
         window.addEventListener('mousemove', this.mouseEvent.bind(this));
 
 
