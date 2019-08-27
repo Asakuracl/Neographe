@@ -46,7 +46,10 @@ class canvasDraw {
         this.animate();
     }
 
-    mouseEvent() {
+    mouseEvent(e) {
+        this.mouse.x = e.x;
+        this.mouse.y = e.y;
+        console.log(this.mouse)
 
     }
 
