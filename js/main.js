@@ -30,7 +30,7 @@ class canvasDraw {
         this.letterValues = Object.values(this.letters.letter);
 
         this.colors = {
-            color: ["#000032", "#FAF9C6", "#FF9517", "#172940", "#343434"]
+            color: ["#000032", "#F5E18B", "#FF9517", "#172940", "#343434"]
         };
 
         this.colorValues = Object.values(this.colors.color);
@@ -98,7 +98,7 @@ class canvasDraw {
         this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
         this.ctx.font = "50pt Open sans";
         this.ctx.textBaseline = "up";
-        this.ctx.fillStyle = "white";
+        this.ctx.fillStyle = "#616971";
         this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
     }
 
