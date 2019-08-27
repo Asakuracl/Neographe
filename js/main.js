@@ -20,7 +20,7 @@ class canvasDraw {
         for (let i = 0; i < 100; i++) {
             let rect = {
                 xPosRect: Math.random() * (innerWidth - 100),
-                yPosRect: Math.random() * innerHeight,
+                yPosRect: Math.random() * (innerHeight - 100),
                 xRect: 100,
                 yRect: 100,
                 xText: this.xPosRect + 40,
