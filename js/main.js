@@ -62,67 +62,68 @@ class canvasDraw {
         this.mouse.y = e.y;
     }
 
-    this.resizeCanvas(){
+    resizeCanvas() {
+        this.canvas.width = window.innerWidth;
+        this.canvas.height = window.innerHeight;
+    };
 
-};
 
+    textDraw(rect) {
 
-textDraw(rect) {
-
-    this.ctx.beginPath();
-    this.ctx.fillStyle = rect.randomColor;
-    this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
-    this.ctx.font = "50pt Open sans";
-    this.ctx.textBaseline = "up";
-    this.ctx.fillStyle = "white";
-    this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
-}
-
-update(rect) {
-    if (rect.xPosRect + rect.xRect > innerWidth || rect.xPosRect < 0) {
-        rect.xSpeed = -rect.xSpeed;
+        this.ctx.beginPath();
+        this.ctx.fillStyle = rect.randomColor;
+        this.ctx.fillRect(rect.xPosRect, rect.yPosRect, rect.xRect, rect.yRect);
+        this.ctx.font = "50pt Open sans";
+        this.ctx.textBaseline = "up";
+        this.ctx.fillStyle = "white";
+        this.ctx.fillText(rect.randomLetter, rect.xText, rect.yText);
     }
 
-    if (rect.yPosRect + rect.yRect > innerHeight || rect.yPosRect < 0) {
-        rect.ySpeed = -rect.ySpeed;
-    }
-
-    rect.xPosRect += rect.xSpeed;
-    rect.xText += rect.xSpeed;
-    rect.yPosRect += rect.ySpeed;
-    rect.yText += rect.ySpeed;
-
-
-    //interactivity
-    if (((this.mouse.x - rect.xPosRect < 100 && this.mouse.x - rect.xText < 100) && (this.mouse.x - rect.xPosRect > -100 && this.mouse.x - rect.xText > -100)) &&
-        ((this.mouse.y - rect.yPosRect < 100 && this.mouse.y - rect.yText < 100) && (this.mouse.y - rect.yPosRect > -100 && this.mouse.y - rect.yText > -100))
-    ) {
-        if (rect.xRect && rect.yRect < this.maxSize) {
-            rect.xRect += 1;
-            rect.xText += 1;
-            rect.yRect += 1;
-            rect.yText += 1;
+    update(rect) {
+        if (rect.xPosRect + rect.xRect > innerWidth || rect.xPosRect < 0) {
+            rect.xSpeed = -rect.xSpeed;
         }
-    } else if (rect.xRect && rect.yRect > rect.minSize) {
-        rect.xRect -= 1;
-        rect.xText -= 1;
-        rect.yRect -= 1;
-        rect.yText -= 1;
+
+        if (rect.yPosRect + rect.yRect > innerHeight || rect.yPosRect < 0) {
+            rect.ySpeed = -rect.ySpeed;
+        }
+
+        rect.xPosRect += rect.xSpeed;
+        rect.xText += rect.xSpeed;
+        rect.yPosRect += rect.ySpeed;
+        rect.yText += rect.ySpeed;
+
+
+        //interactivity
+        if (((this.mouse.x - rect.xPosRect < 100 && this.mouse.x - rect.xText < 100) && (this.mouse.x - rect.xPosRect > -100 && this.mouse.x - rect.xText > -100)) &&
+            ((this.mouse.y - rect.yPosRect < 100 && this.mouse.y - rect.yText < 100) && (this.mouse.y - rect.yPosRect > -100 && this.mouse.y - rect.yText > -100))
+        ) {
+            if (rect.xRect && rect.yRect < this.maxSize) {
+                rect.xRect += 1;
+                rect.xText += 1;
+                rect.yRect += 1;
+                rect.yText += 1;
+            }
+        } else if (rect.xRect && rect.yRect > rect.minSize) {
+            rect.xRect -= 1;
+            rect.xText -= 1;
+            rect.yRect -= 1;
+            rect.yText -= 1;
+        }
+
+        this.textDraw(rect);
     }
 
-    this.textDraw(rect);
-}
 
+    animate() {
+        requestAnimationFrame(this.animate.bind(this));
 
-animate() {
-    requestAnimationFrame(this.animate.bind(this));
+        this.ctx.clearRect(0, 0, innerWidth, innerHeight);
 
-    this.ctx.clearRect(0, 0, innerWidth, innerHeight);
-
-    for (let i = 0; i < this.rectArray.length; i++) {
-        this.update(this.rectArray[i]);
-    }
-};
+        for (let i = 0; i < this.rectArray.length; i++) {
+            this.update(this.rectArray[i]);
+        }
+    };
 
 }
 
