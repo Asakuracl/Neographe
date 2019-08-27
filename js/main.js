@@ -77,7 +77,7 @@ class canvasDraw {
         rect.yPosRect += rect.ySpeed;
         rect.yText += rect.ySpeed;
 
-        if ((this.mouse.x - rect.xPosRect && this.mouse.x - rect.xText) < 50) {
+        if ((this.mouse.x - rect.xPosRect && this.mouse.x - rect.xText) < 50 && (this.mouse.x - rect.xPosRect && this.mouse.x - rect.xText) > -50) {
             rect.xRect += 1;
         }
 
