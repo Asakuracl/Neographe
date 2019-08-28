@@ -30,7 +30,7 @@ class canvasDraw {
 
         this.rectArray = [];
 
-        this.init();
+        this.squareSetting();
         this.animate();
     }
 
@@ -39,7 +39,7 @@ class canvasDraw {
         this.mouse.y = e.y;
     }
 
-    init() {
+    squareSetting() {
         this.rectArray = [];
 
         for (let i = 0; i < this.squareNumber; i++) {
