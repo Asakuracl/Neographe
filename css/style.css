@@ -21,11 +21,7 @@ h1 {
 }
 
 @keyframes turn {
-  0% {
+  to {
     transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
   }
 }
