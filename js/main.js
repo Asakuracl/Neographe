@@ -8,7 +8,8 @@ class canvasDraw {
         this.ctx = this.canvas.getContext("2d");
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
-        this.squareNumber = 1000;
+
+        //this.squareNumber = 1000;
 
         this.mouse = {
             x: undefined,
@@ -80,6 +81,17 @@ class canvasDraw {
     resizeCanvas() {
         this.canvas.width = window.innerWidth;
         this.canvas.height = window.innerHeight;
+        console.log(this.canvas.width);
+
+        this.squareNumber = 0;
+        if (this.canvas.width < 576) {
+            this.squareNumber = 250;
+        } else if (this.canvas.width > 576 && this.canvas.width < 992) {
+            this.squareNumber = 700;
+        } else {
+            this.squareNumber = 1000;
+        }
+
         this.squareSetting();
     };
 
