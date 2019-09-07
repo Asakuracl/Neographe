@@ -15,20 +15,13 @@ h1 {
   text-align: center;
   margin-bottom: 0px;
 
-  background: linear-gradient(
-    45deg,
-    blue 17%,
-    #616971 34%,
-    #343434 51%,
-    #ff9517 68%,
-    #172940 85%
-  );
+  background: linear-gradient(45deg, blue, #616971, #343434, #ff9517, #172940);
 
   background-size: 170%;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  animation: turn 20s linear infinite;
+  animation: turn 60s linear infinite;
 }
 
 @keyframes turn {
