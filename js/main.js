@@ -15,10 +15,19 @@ class canvasDraw {
             y: undefined
         }
 
+        //touch
+        this.touch = {
+            x: undefined,
+            y: undefined
+        }
+
         //this.minSize = 2;
         this.maxSize = 100;
 
         window.addEventListener('mousemove', this.mouseEvent.bind(this));
+
+        //touchEvent
+        window.addEventListener('touchmove', this.touchEvent.bind(this));
 
         window.addEventListener('resize', this.resizeCanvas.bind(this));
 
@@ -37,7 +46,16 @@ class canvasDraw {
     mouseEvent(e) {
         this.mouse.x = e.x;
         this.mouse.y = e.y;
+
+        console.log(e.x);
     }
+
+    touchEvent(e) {
+        this.touches = e.touches[0];
+        this.touch.x = this.touches.clientX;
+        this.touch.y = this.touches.clientY;
+    }
+
 
     squareSetting() {
         this.rectArray = [];
