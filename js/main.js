@@ -57,6 +57,7 @@ class canvasDraw {
     }
 
     touchEvent(e) {
+        e.preventDefault();
         this.touches = e.touches[0];
         this.touch.x = this.touches.clientX;
         this.touch.y = this.touches.clientY;
