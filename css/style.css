@@ -18,7 +18,7 @@ h1 {
   background: linear-gradient(45deg, blue, #616971, #343434, #ff9517, #172940);
 
   background-size: 170%;
-  background-clip: text;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
   animation: turn 60s linear infinite;
