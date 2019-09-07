@@ -11,9 +11,9 @@ class canvasDraw {
 
         this.squareNumber = 0;
         if (window.innerWidth < 576) {
-            this.squareNumber = 250;
+            this.squareNumber = 100;
         } else if (window.innerWidth > 576 && window.innerWidth < 992) {
-            this.squareNumber = 700;
+            this.squareNumber = 600;
         } else {
             this.squareNumber = 1000;
         }
