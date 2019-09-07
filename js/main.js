@@ -46,8 +46,6 @@ class canvasDraw {
     mouseEvent(e) {
         this.mouse.x = e.x;
         this.mouse.y = e.y;
-
-        console.log(e.x);
     }
 
     touchEvent(e) {
@@ -113,10 +111,12 @@ class canvasDraw {
         rect.yTextEnd += rect.ySpeed;
 
 
-        //interactivity
+        //mouse & touch interactivity
         if (((this.mouse.x - rect.xPosRect < 100 && this.mouse.x - rect.xText < 100) && (this.mouse.x - rect.xPosRect > -100 && this.mouse.x - rect.xText > -100)) &&
             ((this.mouse.y - rect.yPosRect < 100 && this.mouse.y - rect.yText < 100) && (this.mouse.y - rect.yPosRect > -100 && this.mouse.y - rect.yText > -100))
-
+            ||
+            ((this.touch.x - rect.xPosRect < 100 && this.touch.x - rect.xText < 100) && (this.touch.x - rect.xPosRect > -100 && this.touch.x - rect.xText > -100)) &&
+            ((this.touch.y - rect.yPosRect < 100 && this.touch.y - rect.yText < 100) && (this.touch.y - rect.yPosRect > -100 && this.touch.y - rect.yText > -100))
         ) {
             if (rect.xRect && rect.yRect < this.maxSize) {
                 rect.xRect += 1;
@@ -136,7 +136,7 @@ class canvasDraw {
         }
 
         this.textDraw(rect);
-    }
+    };
 
 
     animate() {
