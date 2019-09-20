@@ -30,12 +30,12 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(245, 245, 220, 0.65);
+  background-color: rgba(245, 245, 220, 0.6);
 }
 
 #formulName {
   width: 50%;
-  height: 50px;
+  height: 65px;
   position: relative;
   overflow: hidden;
 }
@@ -45,7 +45,7 @@ h1 {
   height: 100%;
   color: #342922;
   background-color: rgba(255, 255, 255, 0);
-  padding-top: 15px;
+  padding-top: 20px;
   border: none;
   outline: none;
 }
@@ -89,6 +89,7 @@ h1 {
 #formulName input:focus + .label-name::after,
 #formulName input:valid + .label-name::after {
   transform: translateX(0em);
+  background-color: rgba(52, 41, 34, 0.3);
 }
 
 @keyframes turn {
