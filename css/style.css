@@ -33,14 +33,14 @@ h1 {
   background-color: rgba(245, 245, 220, 0.6);
 }
 
-#formulName {
+.animate {
   width: 50%;
   height: 60px;
   position: relative;
   overflow: hidden;
 }
 
-#formulName input {
+.animate input {
   width: 100%;
   height: 100%;
   color: #342922;
@@ -52,12 +52,12 @@ h1 {
   transition: background-color 1s ease;
 }
 
-#formulName input:focus {
+.animate input:focus {
   background-color: rgba(255, 255, 255, 1);
   transition: background-color 1s ease;
 }
 
-#formulName label {
+.animate label {
   position: absolute;
   bottom: 0px;
   left: 0%;
@@ -67,7 +67,7 @@ h1 {
   border-bottom: 1px solid #342922;
 }
 
-#formulName label::after {
+.animate label::after {
   content: "";
   position: absolute;
   bottom: -1px;
@@ -86,15 +86,15 @@ h1 {
   transition: all 0.3s ease;
 }
 
-#formulName input:focus + .label-name .content-name,
-#formulName input:valid + .label-name .content-name {
+.animate input:focus + .label-name .content-name,
+.animate input:valid + .label-name .content-name {
   transform: translateY(-1em);
   font-size: 20px;
   color: #342922;
 }
 
-#formulName input:focus + .label-name::after,
-#formulName input:valid + .label-name::after {
+.animate input:focus + .label-name::after,
+.animate input:valid + .label-name::after {
   transform: translateX(0em);
 }
 
