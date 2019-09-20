@@ -71,6 +71,8 @@ h1 {
 .content-name {
   position: absolute;
   bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
 }
 
 @keyframes turn {
