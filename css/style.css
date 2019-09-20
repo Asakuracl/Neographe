@@ -68,6 +68,11 @@ h1 {
   transform: translateX(-100%);
 }
 
+.content-name {
+  position: absolute;
+  bottom: 5px;
+}
+
 @keyframes turn {
   to {
     background-position: 255%;
