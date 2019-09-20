@@ -75,6 +75,13 @@ h1 {
   transition: all 0.3s ease;
 }
 
+#formulName input:focus + .label-name .content-name,
+#formulName input:valid + .label-name .content-name {
+  transform: translateY(-1em);
+  font-size: 20px;
+  color: #cc9f18;
+}
+
 @keyframes turn {
   to {
     background-position: 255%;
