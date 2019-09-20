@@ -83,6 +83,11 @@ h1 {
   color: #cc9f18;
 }
 
+#formulName input:focus + .label-name::after,
+#formulName input:valid + .label-name::after {
+  transform: translateX(0em);
+}
+
 @keyframes turn {
   to {
     background-position: 255%;
