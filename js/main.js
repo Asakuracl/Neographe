@@ -1,13 +1,10 @@
-// canvas
-
-// 1 methode
-
+// canvas 1 methode
 class canvasDraw {
     constructor(canvas) {
         this.canvas = canvas;
         this.ctx = this.canvas.getContext("2d");
-        this.canvas.width = window.innerWidth;
-        this.canvas.height = window.innerHeight;
+        this.canvas.width = window.innerWidth - 25;
+        this.canvas.height = window.innerHeight - 85;
 
         this.squareNumber = 0;
         if (window.innerWidth < 576) {
