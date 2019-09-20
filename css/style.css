@@ -35,7 +35,7 @@ h1 {
 
 #formulName {
   width: 50%;
-  height: 65px;
+  height: 60px;
   position: relative;
   overflow: hidden;
 }
@@ -45,15 +45,16 @@ h1 {
   height: 100%;
   color: #342922;
   background-color: rgba(255, 255, 255, 0);
-  padding-top: 20px;
+  padding-top: 15px;
   border: none;
   outline: none;
   font-size: 15px;
+  transition: background-color 1s ease;
 }
 
-#formulName input:focus,
-#formulName input:valid {
+#formulName input:focus {
   background-color: rgba(255, 255, 255, 1);
+  transition: background-color 1s ease;
 }
 
 #formulName label {
