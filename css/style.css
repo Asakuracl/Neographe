@@ -37,6 +37,7 @@ h1 {
   width: 50%;
   height: 50px;
   position: relative;
+  overflow: hidden;
 }
 
 #formulName input {
