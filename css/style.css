@@ -163,6 +163,14 @@ h3 {
   transform: translateX(0em);
 }
 
+#button {
+  width: 100%;
+  color: #ff9517;
+  background-color: #172940;
+  border: none;
+  border-radius: 5px;
+}
+
 @keyframes turn {
   to {
     background-position: 255%;
