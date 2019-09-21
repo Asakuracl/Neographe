@@ -26,8 +26,8 @@ body {
 }
 
 .card {
-  width: 60%;
-  height: 55%;
+  width: 40%;
+  height: 50%;
   transition: transform 1s ease;
   transform-style: preserve-3d;
 }
@@ -51,6 +51,7 @@ body {
 .card .front {
   color: white;
   background-color: #172940;
+  z-index: 1;
 }
 
 .card .back {
@@ -58,11 +59,11 @@ body {
   transform: rotateY(180deg);
 }
 
-/*
+/*try to fix that on mf*/
 .card:hover .back {
+  transition: transform 1s ease;
   z-index: 2;
-  transform: transform 5s ease;
-}*/
+}
 
 h1 {
   font-family: "Calligraffiti";
