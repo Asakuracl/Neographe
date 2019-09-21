@@ -11,7 +11,7 @@ body {
 }
 
 h1,
-h3 {
+.icon {
   font-family: "Calligraffiti";
   text-align: center;
   margin-bottom: 0px;
@@ -24,6 +24,10 @@ h3 {
   -webkit-text-fill-color: transparent;
 
   animation: turn 60s linear infinite;
+}
+
+h3 {
+  font-family: "Calligraffiti";
 }
 
 .container {
@@ -71,8 +75,7 @@ h3 {
 }
 
 .front p,
-.front h3,
-.back p {
+.front h3 {
   padding-left: 3em;
 }
 
@@ -89,12 +92,10 @@ h3 {
 
 #formul {
   position: absolute;
-  top: 5em;
+  left: 0.5em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: rgba(245, 245, 220, 0.7);
-  font-weight: bold;
 }
 
 .animate {
