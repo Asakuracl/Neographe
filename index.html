@@ -24,15 +24,38 @@
 					<p><span><i class="fas fa-cogs icon"></i></span> Maintenance</p>
 					<p><span><i class="fas fa-pencil-alt icon"></i></span> Création logo</p>
 					<p><span><i class="fab fa-forumbee icon"></i></span> Formullaire de contact</p>
-
 				</figure>
 				<figure class="back">
-					<p>Click</p>
+					<form id="formul">
+						<p>Formulaire</p>
+						<p id="formulName" class="animate">
+							<input type="text" name="Nom" id="nom" required>
+							<label for="name" class="label-name">
+								<span class="content-name">Nom</span>
+							</label>
+						</p>
+						<p id="formulFirstName" class="animate">
+							<input type="text" name="Prenom" id="Prenom" required>
+							<label for="name" class="label-name">
+								<span class="content-name">Prenom</span>
+							</label>
+						</p>
+						<p id="formulMail" class="animate">
+							<input type="email" name="email" id="email" required>
+							<label for="name" class="label-name">
+								<span class="content-name">Mail</span>
+							</label>
+						</p>
+						<textarea placeholder="Votre demande" rows="4" cols="50">Test
+							</textarea>
+						<br>
+						<input type="submit" value="Envoyer" id="envoyer">
+					</form>
 				</figure>
 			</div>
 		</div>
 	</div>
-
+	<!--
 	<form id="formul">
 		<p>Formulaire</p>
 		<p id="formulName" class="animate">
@@ -58,7 +81,7 @@
 		<br>
 		<input type="submit" value="Envoyer" id="envoyer">
 	</form>
-
+-->
 	<canvas></canvas>
 
 	<!-- script-->
