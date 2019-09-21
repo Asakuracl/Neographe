@@ -42,7 +42,7 @@ h3 {
 
 .cardContainer {
   width: 30%;
-  height: 24em;
+  height: 25em;
 }
 
 .card {
@@ -76,7 +76,7 @@ h3 {
 
 .front p,
 .front h3 {
-  padding-left: 3em;
+  padding-left: 1em;
 }
 
 .card .back {
@@ -118,7 +118,7 @@ h3 {
 }
 
 .animate input:focus {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.7);
   transition: background-color 1s ease;
 }
 
@@ -139,7 +139,7 @@ h3 {
   left: 0px;
   width: 100%;
   height: 100%;
-  border-bottom: 3px solid #ff9517;
+  border-bottom: 3px solid #172940;
   transform: translateX(-100%);
   transition: transform 0.3s ease;
 }
