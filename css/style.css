@@ -32,6 +32,9 @@ h3 {
 
 .menu {
   cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .bar1,
