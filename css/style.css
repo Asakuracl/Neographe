@@ -10,7 +10,8 @@ body {
   background: beige;
 }
 
-h1 {
+h1,
+h3 {
   font-family: "Calligraffiti";
   text-align: center;
   margin-bottom: 0px;
@@ -59,14 +60,20 @@ h1 {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .card .front {
   color: white;
   background-color: #172940;
   z-index: 1;
+}
+
+.front p,
+.front h3,
+.back p {
+  padding-left: 3em;
 }
 
 .card .back {
