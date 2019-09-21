@@ -66,11 +66,12 @@ h3 {
   width: 100%;
   height: auto;
   /*change to flex when finish menu*/
-  display: none;
+  display: flex;
   justify-content: start;
   margin-bottom: 5em;
   position: absolute;
   top: 25px;
+  transition: 1s ease;
 }
 
 .cardContainer {
