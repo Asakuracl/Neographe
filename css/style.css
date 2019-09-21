@@ -47,19 +47,19 @@ h3 {
   transition: 0.4s;
 }
 
-.change .bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+.move .bar1 {
+  background-color: red;
+  transform: rotate(90deg) translate(-5px, 8px);
 }
 
-.change .bar2 {
-  transform: rotate(180deg) translate(-9px, 6px);
-  transform: rotate(180deg) translate(-9px, 6px);
+.move .bar2 {
+  transform: rotate(90deg) translate(-5px, 0px);
+  z-index: 1;
 }
 
-.change .bar3 {
-  transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+.move .bar3 {
+  background-color: grey;
+  transform: rotate(90deg) translate(-27px, -8px);
 }
 
 .container {
