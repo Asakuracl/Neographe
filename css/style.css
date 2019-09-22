@@ -95,7 +95,7 @@ h3 {
 .services {
   margin-top: 2em;
 }
-.circle {
+.pointUnderline {
   position: relative;
   bottom: 0.75em;
   left: 3.1em;
@@ -106,7 +106,7 @@ h3 {
   border: 0.1em solid white;
 }
 
-.circle::before {
+.pointUnderline::before {
   position: absolute;
   width: 2em;
   height: 0.25em;
@@ -115,7 +115,7 @@ h3 {
   margin-left: -2em;
 }
 
-.circle::after {
+.pointUnderline::after {
   position: absolute;
   width: 2em;
   height: 0.25em;
