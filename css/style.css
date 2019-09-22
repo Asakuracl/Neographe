@@ -64,14 +64,13 @@ h3 {
 .container {
   width: 100%;
   height: auto;
-  /*change to flex when finish menu*/
   display: flex;
   justify-content: start;
   margin-bottom: 5em;
   position: absolute;
   top: 55px;
   transition: 0.5s ease;
-  /*transform: translateX(-30em); work on html*/
+  transform: translateX(-30em);
 }
 
 .inForm {
@@ -90,7 +89,6 @@ h3 {
   transform-style: preserve-3d;
 }
 
-/*work */
 .services {
   margin-top: 2em;
 }
@@ -133,8 +131,6 @@ h3 {
   height: 1em;
 }
 
-/* work zone */
-
 .cardContainer:hover .card {
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
@@ -146,12 +142,6 @@ h3 {
   position: absolute;
   margin: 0;
   border-radius: 10px;
-  /*
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: flex-start;
-  */
 }
 
 .card .front {
