@@ -92,6 +92,7 @@ h3 {
 .services {
   margin-top: 2em;
 }
+
 .pointUnderline {
   position: relative;
   bottom: 0.75em;
@@ -129,6 +130,10 @@ h3 {
   margin-right: 0.5em;
   padding: 0.5em;
   height: 1em;
+}
+
+.text-container {
+  color: #ff9517;
 }
 
 .cardContainer:hover .card {
