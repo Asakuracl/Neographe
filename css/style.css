@@ -91,7 +91,8 @@ h3 {
   transform-style: preserve-3d;
 }
 
-.card:hover {
+.cardContainer:hover .card {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
@@ -101,15 +102,18 @@ h3 {
   position: absolute;
   margin: 0;
   border-radius: 10px;
+  /*
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
+  */
 }
 
 .card .front {
   color: white;
   background-color: #172940;
+  pointer-events: none;
   z-index: 1;
 }
 
@@ -123,10 +127,11 @@ h3 {
   transform: rotateY(180deg);
 }
 
-/*try to fix that on mf*/
-.card:hover .back {
-  transition: transform 1s ease;
-  z-index: 2;
+/*fix on mf & edge*/
+.card:hover .front {
+  z-index: 0;
+  /*-webkit-transition: z-index 2s ease;*/
+  transition: z-index 1s ease;
 }
 
 #formul {
