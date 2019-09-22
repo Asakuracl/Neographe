@@ -157,7 +157,7 @@ class canvasDraw {
 
 const canvas = document.querySelector("canvas");
 
-const draw = new canvasDraw(canvas);
+//const draw = new canvasDraw(canvas);
 
 //2 methode 
 
